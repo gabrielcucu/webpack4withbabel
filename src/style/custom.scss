@@ -1,31 +1,67 @@
-body{
-    background-color:#8097a7   ;
-    color:whitesmoke;
-}
-.container{
-    position: relative;
-    background:url('../img/adrenaline-adult-buildings-373934.jpg')  no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    top:30px;  
-    max-width: 60rem;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 10px;
-    &:after{
-        background: linear-gradient(45deg,rgba(228, 134, 11, 0.1) 10%,rgba(221, 4, 4, 0.938) 95%);
-    }
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
 
-    &.shadow{
-        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-    }
-} 
-.top-bar{
-    z-index: 9999;
+body {
+  background-color:rgba(100, 116, 126, 0.596);
+  color: whitesmoke;
+}
+.background-container {
+  height: inherit;
+  width: inherit;
+  background: url("../img/adrenaline-adult-buildings-373934.jpg") no-repeat
+    center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+
+  border-radius: 10px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.17);
+    background: linear-gradient(
+      45deg,
+      rgba(70, 89, 94, 0.253) 10%,
+      rgba(62, 78, 85, 0.938) 95%
+    );
+
+    border-radius: 10px;
+  }
+}
+.container {
+  position: relative;
+  top: 30px;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
+  &.shadow {
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+.content{
+position: relative;
+}
+.top-bar {
+  font-weight: 300;
+  z-index: 9999;
+  background-color: transparent;
+  ul {
     background-color: transparent;
-    ul{
-        background-color: transparent;
+    a {
+      color: white;
+      &:hover {
+        color: #c4c4c4;
+      }
     }
+  }
 }
