@@ -77,6 +77,10 @@
 @import '../../node_modules/foundation-sites/scss/prototype/prototype';
  
 @import '../../node_modules/motion-ui/src/motion-ui';
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
@@ -94,7 +98,7 @@
   @include foundation-forms;
   @include foundation-typography;
 
-  // Grids
+  // Grids 
   @if not $flex {
     @include foundation-grid;
   }

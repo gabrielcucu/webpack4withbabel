@@ -1,59 +1,34 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
-
+$paddingFromTop: 3vh;
+$borderRadius:3px;
 body {
-  background-color:rgba(100, 116, 126, 0.596);
-  color: whitesmoke;
+ // background-color: rgba(100, 116, 126, 0.596);
+ background-color: rgba(226, 196, 187, 0.486);
 }
-.background-container {
-  height: inherit;
-  width: inherit;
-  background: url("../img/adrenaline-adult-buildings-373934.jpg") no-repeat
-    center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 0px;
-  left: 0px;
 
-  border-radius: 10px;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.17);
-    background: linear-gradient(
-      45deg,
-      rgba(70, 89, 94, 0.253) 10%,
-      rgba(62, 78, 85, 0.938) 95%
-    );
-
-    border-radius: 10px;
-  }
-}
 .container {
+  background: white;
   position: relative;
-  top: 30px;
-  max-width: 60rem;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 10px;
-  &.shadow {
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  top: $paddingFromTop;
+  margin: 0 auto 0 auto;
+  max-width: 70rem;
+  border-radius: $borderRadius;
+  box-shadow: 0 19px 38px rgba(73, 73, 73, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  .orbit{
+    color:white;
   }
 }
-.content{
-position: relative;
+ 
+.orbit {
+  height: 70vh;
 }
+
+.row {
+  padding-top: $paddingFromTop;
+}
+ 
 .top-bar {
-  font-weight: 300;
-  z-index: 9999;
+  font-weight: 300; 
   background-color: transparent;
   ul {
     background-color: transparent;
@@ -65,3 +40,26 @@ position: relative;
     }
   }
 }
+.image-bg {
+  background: url("../img/adrenaline-adult-buildings-373934.jpg") no-repeat
+    center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  position: relative;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: $borderRadius $borderRadius 0 0 ;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
+    opacity: 0.6;
+    z-index: 0;
+    border-radius: $borderRadius $borderRadius 0 0 ;
+  }
+}
+
